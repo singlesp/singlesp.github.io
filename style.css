@@ -157,17 +157,13 @@ figcaption {
     font-size: 16px;
   }
 
-  .publication figure {
-    width: 100%;
-  }
-
   .publication figure img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 
   .publication figcaption {
     font-size: 14px;
-    margin-top: 0.5rem;
   }
 }
+
