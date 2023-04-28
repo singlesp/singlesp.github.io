@@ -10,15 +10,9 @@
     justify-content: center;
 }
 
-/* Set the width and height of headshot */
-.container img {
-    width: 100px;
-    height: 1000px;
-}
-
-/* Center headshot icons horizontally */
-.container {
-    display: flex;
-    justify-content: center;
+header img {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
 }
 
