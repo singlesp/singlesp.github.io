@@ -1,8 +1,3 @@
-/* Center everything */
-body, header, .container {
-  text-align: center;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +7,26 @@ body, header, .container {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+/*  justify-content: center;*/
+  justify-content: 30px;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 header img {
@@ -23,13 +38,136 @@ header img {
 
 /* Set the width and height of social media icons */
 .social-icons img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
+  margin: 0 8px; /* Adjust the value to increase or decrease the spacing */
 }
 
 /* Center social media icons horizontally */
 .social-icons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
+nav {
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+footer {
+/*  background-color: #333;*/
+/*  color: white;*/
+  padding: 1rem;
+  text-align: center;
+}
+
+.publication {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+figure img {
+  display: block;
+  width: 550px;
+  height: auto;
+  margin: 0 auto;
+}
+
+figcaption {
+  text-align: left;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Media articles section */
+.media-articles article {
+  margin-bottom: 1rem;
+}
+
+.media-articles h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* YouTube talk recordings section */
+.youtube-talks .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.youtube-talks iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circular-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.h2-spacing {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .publication figure {
+    width: 100%;
+  }
+
+  .publication figure img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .publication figcaption {
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+}
