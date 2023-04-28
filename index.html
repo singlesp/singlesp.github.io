@@ -18,7 +18,8 @@
 				<a href="https://twitter.com/singletonion" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
 				<a href="https://www.linkedin.com/in/spsingleton/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
 				<a href="https://github.com/singlesp" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
-				<a href="mailto:sps253@cornell.edu" target="_blank"><img src="images/email-icon.png" alt="Email"></a>
+<!--				<a href="mailto:sps253@cornell.edu" target="_blank"><img src="images/email-icon.png" alt="Email"></a>-->
+                <a href="#" id="email-link" onclick="copyEmailToClipboard(event)"> <img src="images/email-icon.png" alt="Email"></a>
 			</div>
 		</div>
 	</header>
@@ -43,5 +44,22 @@
 			<p>Copyright © Parker Singleton 2023</p>
 		</div>
 	</footer>
+    <script>
+      function copyEmailToClipboard(event) {
+        event.preventDefault();
+
+        const email = 'sps253@cornell.edu';
+        const textarea = document.createElement('textarea');
+
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        alert('Email address copied to clipboard!');
+      }
+    </script>
+
 </body>
 </html>
