@@ -1,9 +1,20 @@
-/*header img {*/
-/*    display: block;*/
-/*    width: 150px;*/
-/*    height 150px;*/
-/*    margin: 0 auto;*/
-/*}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header img {
+    display: block;
+    width: 150px;
+    height 150px;
+    margin: 0 auto;
+}
 
 /* Set the width and height of social media icons */
 .social-icons img {
