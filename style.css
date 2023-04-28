@@ -1,3 +1,9 @@
+header img {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
 /* Set the width and height of social media icons */
 .social-icons img {
     width: 30px;
@@ -8,11 +14,5 @@
 .social-icons {
     display: flex;
     justify-content: center;
-}
-
-header img {
-    display: block;
-    max-width: 50%;
-    margin: 0 auto;
 }
 
