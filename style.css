@@ -40,6 +40,7 @@ header img {
 .social-icons img {
   width: 30px;
   height: 30px;
+  margin: 0 8px; /* Adjust the value to increase or decrease the spacing */
 }
 
 /* Center social media icons horizontally */
