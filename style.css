@@ -1,5 +1,12 @@
-/* Center everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,17 +27,6 @@ header {
   text-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
 header img {
   display: block;
   width: 150px;
@@ -40,13 +36,42 @@ header img {
 
 /* Set the width and height of social media icons */
 .social-icons img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 /* Center social media icons horizontally */
 .social-icons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+main {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
