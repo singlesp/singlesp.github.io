@@ -146,3 +146,14 @@ figcaption {
 .h2-spacing {
   margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
