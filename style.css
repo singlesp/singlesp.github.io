@@ -13,13 +13,14 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 2rem);
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 header img {
@@ -41,10 +42,8 @@ header img {
   justify-content: center;
 }
 
-nav, main, footer {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+nav {
+  margin-bottom: 2rem;
 }
 
 nav ul {
@@ -52,7 +51,6 @@ nav ul {
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin-top: 2rem;
 }
 
 nav li {
@@ -66,8 +64,7 @@ nav a {
 }
 
 main {
-  text-align: center;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 footer {
