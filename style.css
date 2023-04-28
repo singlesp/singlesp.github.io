@@ -9,7 +9,8 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+/*  justify-content: center;*/
+  justify-content: 30px;
   align-items: center;
   min-height: 100vh;
 }
