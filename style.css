@@ -9,11 +9,16 @@ body {
   line-height: 1.6;
 }
 
+/* Center everything */
+body, header, .container {
+  text-align: center;
+}
+
 header img {
-    display: block;
-    width: 150px; !important;
-    height 150px; !important;
-    margin: 0 auto;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
 }
 
 /* Set the width and height of social media icons */
