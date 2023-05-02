@@ -21,6 +21,12 @@ body {
   text-align: center;
 }
 
+.aboutbody{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
 header {
   margin-bottom: 2rem;
   display: flex;
