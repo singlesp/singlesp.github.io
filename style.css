@@ -142,6 +142,7 @@ figcaption {
 }
 
 .circular-image {
+  margin-top: 2rem;
   border-radius: 50%;
   overflow: hidden;
   width: 150px;
