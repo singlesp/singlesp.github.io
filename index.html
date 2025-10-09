@@ -1,69 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Parker Singleton</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 	<header>
 		<div class="container">
-<!--			<img src="images/headshot.png" alt="Parker Singleton">-->
-            <img src="images/headshot.png" alt="Parker Singleton" class="circular-image">
+			<!--			<img src="images/headshot.png" alt="Parker Singleton">-->
+			<img src="images/headshot.png" alt="Parker Singleton" class="circular-image">
 			<h1>Parker Singleton</h1>
-            <h2 class="h2-spacing">Postdoctoral Fellow in Neuroinformatics</h2>
+			<h2 class="h2-spacing">Postdoctoral Fellow in Neuroinformatics</h2>
 			<div class="social-icons">
-				<a href="https://scholar.google.com/citations?hl=en&user=0rCtfyIAAAAJ" target="_blank"><img src="images/google-scholar-icon.png" alt="Google Scholar"></a>
-				<a href="https://twitter.com/singletonion" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
-				<a href="https://www.linkedin.com/in/spsingleton/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-				<a href="https://github.com/singlesp" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
-<!--				<a href="mailto:sps253@cornell.edu" target="_blank"><img src="images/email-icon.png" alt="Email"></a>-->
-                <a href="#" id="email-link" onclick="copyEmailToClipboard(event)"> <img src="images/email-icon.png" alt="Email"></a>
+				<a href="https://scholar.google.com/citations?hl=en&user=0rCtfyIAAAAJ" target="_blank"><img
+						src="images/google-scholar-icon.png" alt="Google Scholar"></a>
+				<a href="https://twitter.com/singletonion" target="_blank"><img src="images/twitter-icon.png"
+						alt="Twitter"></a>
+				<a href="https://www.linkedin.com/in/spsingleton/" target="_blank"><img src="images/linkedin-icon.png"
+						alt="LinkedIn"></a>
+				<a href="https://github.com/singlesp" target="_blank"><img src="images/github-icon.png"
+						alt="GitHub"></a>
+				<!--				<a href="mailto:sps253@cornell.edu" target="_blank"><img src="images/email-icon.png" alt="Email"></a>-->
+				<a href="#" id="email-link" onclick="copyEmailToClipboard(event)"> <img src="images/email-icon.png"
+						alt="Email"></a>
 			</div>
 		</div>
 	</header>
 	<nav>
 		<div class="container">
-		    <ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="research.html">Research</a></li>
-            <li><a href="media.html">Media</a></li>
-                	<li><a href="cv.pdf" target="_blank">CV</a></li>
-            	    </ul>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="research.html">Research</a></li>
+				<li><a href="media.html">Media</a></li>
+				<li><a href="cv.pdf" target="_blank">CV</a></li>
+			</ul>
 		</div>
 	</nav>
 	<main>
 		<div class="container">
 			<h1>About</h1>
-            <div class="aboutbody">
-			<p>I have a diverse academic and professional background spanning organic chemistry, neuroscience, computational modeling, and teaching. I am currently a postdoctoral researcher at <a href="https://www.pennlinc.io" target="_blank">PennLINC</a> where I study and model the impacts of various forms of neuromodulation on brain dynamics to better understand brain function in altered states of consciousness (e.g. psychedelics), and assess the synthesized evidence for the clinical outcomes and risks of psychedelic-assisted therapies.
-            <br><br>
-            </p>
-            </div>
+			<div class="aboutbody">
+				<p>I have a diverse academic and professional background spanning organic chemistry, neuroscience,
+					computational modeling, and teaching.
+					I am currently a senior research scientist at <a href="https://www.pennlinc.io"
+						target="_blank">PennLINC</a> where I lead research and development for the <a
+						href="https://sypres.io" target="_blank">PSYPRES</a> project.
+					I'm also a member of the neuroinformatics team and take part in neuroimaing data curation and
+					analysis as a full-stack software engineer.
+					<br><br>
+				</p>
+			</div>
 		</div>
 	</main>
 	<footer>
 		<div class="container">
-			<p>Copyright © Parker Singleton 2023</p>
+			<p>Copyright © Parker Singleton 2025</p>
 		</div>
 	</footer>
-    <script>
-      function copyEmailToClipboard(event) {
-        event.preventDefault();
+	<script>
+		function copyEmailToClipboard(event) {
+			event.preventDefault();
 
-        const email = 'sps253@cornell.edu';
-        const textarea = document.createElement('textarea');
+			const email = 'sps253@cornell.edu';
+			const textarea = document.createElement('textarea');
 
-        textarea.value = email;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
+			textarea.value = email;
+			document.body.appendChild(textarea);
+			textarea.select();
+			document.execCommand('copy');
+			document.body.removeChild(textarea);
 
-        alert('Email address copied to clipboard!');
-      }
-    </script>
+			alert('Email address copied to clipboard!');
+		}
+	</script>
 
 </body>
+
 </html>
