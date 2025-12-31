@@ -246,6 +246,16 @@
             color: var(--muted);
         }
 
+        .alert {
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 99, 71, 0.45);
+            background: rgba(255, 99, 71, 0.08);
+            color: #ffc7b8;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
         .playlist {
             margin-top: 18px;
             border-radius: 14px;
@@ -283,8 +293,10 @@
         <div class="card">
             <header>
                 <h1>NYE Bonfire Invitation</h1>
-                <p>Come over for a family-friendly NYE gathering.</p>
+                <p>This event has been canceled. Thanks for understanding.</p>
                 <div class="tags">
+                    <span class="tag"
+                        style="background: rgba(255, 99, 71, 0.14); color: #ffc7b8; border-color: rgba(255, 99, 71, 0.35);">Canceled</span>
                     <span class="tag">Dec 31, 2025</span>
                     <span class="tag">5:00 PM → until</span>
                     <span class="tag">Greenville, SC</span>
@@ -293,39 +305,8 @@
 
             <section class="hero">
                 <div class="hero-content">
-                    <div>
-                        <div class="mini">Countdown to kickoff</div>
-                        <div class="countdown" id="countdown">
-                            <div class="time-box">
-                                <div class="time-value" id="days">--</div>
-                                <div class="time-label">Days</div>
-                            </div>
-                            <div class="time-box">
-                                <div class="time-value" id="hours">--</div>
-                                <div class="time-label">Hours</div>
-                            </div>
-                            <div class="time-box">
-                                <div class="time-value" id="minutes">--</div>
-                                <div class="time-label">Minutes</div>
-                            </div>
-                            <div class="time-box">
-                                <div class="time-value" id="seconds">--</div>
-                                <div class="time-label">Seconds</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cta-row">
-                        <a class="btn"
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSdDZtq6ysEJaM-1fGTDYdj_ui_sPWJPUBVIagn4U5uwa96gpw/viewform?usp=sf_link"
-                            target="_blank" rel="noopener">RSVP</a>
-                        <a class="btn secondary"
-                            href="https://maps.apple.com/?address=302%20Paris%20Mountain%20Ave,%20Greenville,%20SC"
-                            target="_blank" rel="noopener">Map</a>
-                        <a class="btn secondary"
-                            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=NYE%20Bonfire%20%26%20Countdown&dates=20251231T220000Z/20260101T040000Z&details=Bonfire.&location=302%20Paris%20Mountain%20Ave%2C%20Greenville%2C%20SC"
-                            target="_blank" rel="noopener">Add to Calendar</a>
-                    </div>
-                    <div class="mini">Snow/rain plan: move inside with the wood stove and board games.</div>
+                    <div class="alert">This NYE bonfire has been canceled. We hope to see you at the next one.</div>
+                    <div class="mini">We’ll post here if a new date is set. Text Parker with any questions.</div>
                 </div>
             </section>
 
@@ -337,8 +318,8 @@
                 </div>
                 <div class="info-card">
                     <h3>When</h3>
-                    <p><strong>Tuesday, Dec 31</strong></p>
-                    <p class="mini">Fire lit at 5:00 PM · Hang til whenever.</p>
+                    <p><strong>Canceled</strong></p>
+                    <p class="mini">No NYE bonfire this year. We’ll share the next date soon.</p>
                 </div>
                 <div class="info-card">
                     <h3>We’ve Got</h3>
@@ -363,39 +344,10 @@
                     loading="lazy"></iframe>
             </div>
             <footer>
-                Check back here for weather updates day-of.
+                Event canceled. Check back here for future gatherings.
             </footer>
         </div>
     </main>
-
-    <script>
-        // Simple countdown timer targeting the event start
-        const target = new Date('December 31, 2025 17:00:00').getTime();
-        const el = {
-            days: document.getElementById('days'),
-            hours: document.getElementById('hours'),
-            minutes: document.getElementById('minutes'),
-            seconds: document.getElementById('seconds')
-        };
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const diff = Math.max(target - now, 0);
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((diff / (1000 * 60)) % 60);
-            const seconds = Math.floor((diff / 1000) % 60);
-
-            el.days.textContent = String(days).padStart(2, '0');
-            el.hours.textContent = String(hours).padStart(2, '0');
-            el.minutes.textContent = String(minutes).padStart(2, '0');
-            el.seconds.textContent = String(seconds).padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
 </body>
 
 </html>
