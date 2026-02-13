@@ -4,7 +4,7 @@
 % ---- Packages ----
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.45in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage[margin=0.4in, top=0.35in, bottom=0.35in]{geometry}
 \usepackage{tgheros}                % Helvetica-like sans-serif
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{microtype}
@@ -41,7 +41,7 @@
   {\MakeUppercase}
   [\vspace{-0.7em}{\color{divider}\rule{\linewidth}{0.5pt}}]
 
-\titlespacing*{\section}{0pt}{0.6em}{0.25em}
+\titlespacing*{\section}{0pt}{0.55em}{0.2em}
 
 % ---- List Formatting ----
 \setlist[itemize]{leftmargin=1.2em, itemsep=0pt, parsep=0pt, topsep=1pt, label={\textcolor{divider}{\textbullet}}}
@@ -54,7 +54,7 @@
 \newcommand{\roleentry}[4]{%
   \textbf{#1} \hfill \textcolor{light}{\small #2} \\[-0.15em]
   {\small\textit{#3} \hfill #4}
-  \vspace{0.15em}
+  \vspace{0.1em}
 }
 
 \newcommand{\me}{\textbf{S.\ P.\ Singleton}}
@@ -64,7 +64,7 @@
 
 % ---- Header ----
 \begin{center}
-  {\LARGE\bfseries\color{accent} S.\ Parker Singleton}\\[0.25em]
+  {\LARGE\bfseries\color{accent} S.\ Parker Singleton}\\[0.15em]
   {\small
     \href{mailto:sps253@cornell.edu}{sps253@cornell.edu}
     \enspace$\vert$\enspace
@@ -74,7 +74,11 @@
   }
 \end{center}
 
-\vspace{0.15em}
+\vspace{0.1em}
+\begin{center}
+  {\small Computational neuroscientist studying how psychedelics and pharmacological interventions reshape brain dynamics. \\
+  Builder of open-source tools for clinical evidence synthesis and neuroimaging data curation.}
+\end{center}
 
 % ================================================================
 \section{Experience}
@@ -83,39 +87,38 @@
 \roleentry{Senior Scientist}{Aug 2025 -- Present}
   {Penn Lifespan Informatics \& Neuroimaging Center, University of Pennsylvania}{Philadelphia, PA}
 \begin{itemize}
-  \item Lead researcher and developer for \href{https://sypres.io}{SYPRES}: living evidence synthesis platform for clinical psychedelic research.
-  \item Member of the neuroinformatics team: neuroimaging data curation, analysis, release; full-stack software engineering.
+  \item Built and launched \href{https://sypres.io}{SYPRES}, a living evidence synthesis platform for clinical psychedelics research.
+  \item Curated and released 2 neuroimaging datasets; developed full-stack tools adopted by the PennLINC neuroinformatics team.
 \end{itemize}
-\vspace{0.2em}
+\vspace{0.1em}
 
 \roleentry{Postdoctoral Researcher}{May 2024 -- Jul 2025}
   {Penn Lifespan Informatics \& Neuroimaging Center, University of Pennsylvania}{Philadelphia, PA}
 \begin{itemize}
-  \item Assessed clinical efficacy and risks of psychedelic-assisted therapies using fMRI and computational modeling.
-  \item Developed novel frameworks for quantifying psychedelic-induced functional brain plasticity.
+  \item Led the first living systematic review and meta-analysis of psilocybin for depression, synthesizing 15 clinical trials; published in \textit{Nature Mental Health}.
 \end{itemize}
-\vspace{0.2em}
+\vspace{0.1em}
 
 \roleentry{Postdoctoral Researcher}{Apr 2023 -- Apr 2024}
   {Computational Connectomics Lab, Weill Cornell Medicine}{New York, NY}
 \begin{itemize}
-  \item Applied network control theory and multimodal neuroimaging to study pharmacological effects on brain dynamics.
-  \item Mentored undergraduate and graduate students on rotation and thesis projects.
+  \item Published 2 papers applying network control theory to substance use.
+  \item Mentored 4 undergraduate and 1 graduate students on neuroimaging rotation and thesis projects.
 \end{itemize}
-\vspace{0.2em}
+\vspace{0.1em}
 
 \roleentry{NSF Graduate Research Fellow}{Jun 2020 -- Apr 2023}
   {Department of Computational Biology, Cornell University}{Ithaca, NY}
 \begin{itemize}
-  \item Identified neural correlates of MDMA-assisted therapy for PTSD via audio script-driven fMRI paradigms.
-  \item Published first-author papers in \textit{Nature Communications} and \textit{Frontiers in Psychiatry}.
+  \item First-authored a \textit{Nature Communications} paper demonstrating that psychedelics flatten the brain's control energy landscape --- cited 175+ times.
+  \item Identified neural correlates of MDMA-assisted therapy for PTSD in a Phase 2 clinical trial; published in \textit{Frontiers in Psychiatry}.
 \end{itemize}
-\vspace{0.2em}
+\vspace{0.1em}
 
 \roleentry{High School Teacher}{Aug 2017 -- Jun 2020}
   {Palmetto Scholars Academy}{North Charleston, SC}
 \begin{itemize}
-  \item Designed chemistry curricula for gifted students; taught dual-enrollment college chemistry and research methods.
+  \item Taught dual-enrollment college chemistry and a research methods course to intellectually gifted students; coached 4 VEX robotics teams to 5 state-level awards and the US CREATE Open.
 \end{itemize}
 
 % ================================================================
@@ -124,14 +127,15 @@
 
 \textbf{Ph.D.\ Computational Biology} \hfill Cornell University, 2023 \\
 \textbf{M.S.\ Chemistry} \hfill Cornell University, 2017 \\
-\textbf{B.S.\ Chemistry} \hfill University of South Carolina, 2015
+\textbf{B.S.\ Chemistry} \hfill University of South Carolina, 2015 \\[0.2em]
+{\small\textbf{Technical:} Python, R, MATLAB, Bash, Git \enspace$\vert$\enspace fMRI, dMRI, ASL, PET \enspace$\vert$\enspace Meta-analysis, ML, dynamical systems modeling \enspace$\vert$\enspace Full-stack web dev}
 
 % ================================================================
 \section{Selected Publications}
 % ================================================================
 
 {\small
-\begin{enumerate}[leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=2pt]
+\begin{enumerate}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1pt]
   \item Mallaroni, \me, et al.\ ``Spatiotemporal mapping of brain organisation following 2C-B and psilocybin.'' \textit{Mol.\ Psychiatry}, 2026.
 
   \item \me, et al.\ ``An initiative for living evidence synthesis in clinical psychedelic research.'' \textit{Nat.\ Ment.\ Health}, 2025.
@@ -142,46 +146,26 @@
 
   \item \me, Wang, et al.\ ``Altered brain activity and functional connectivity after MDMA-assisted therapy for PTSD.'' \textit{Front.\ Psychiatry}, 2023.
 \end{enumerate}
-\vspace{0.1em}
-\textcolor{light}{\textit{Full list: 13 original research articles \& 2 commentaries across Nature Communications, Nature Biomedical Engineering, Nature Human Behaviour, Nature Mental Health, Molecular Psychiatry, Communications Biology, and others.}}
+\vspace{-0.1em}
+\textcolor{light}{\textit{15 total publications across Nature Communications, Molecular Psychiatry, Nature Biomedical Engineering, and others.}} \\
+\textcolor{light}{\textit{h-index: 7 \enspace$\vert$\enspace 518 citations}}
 }
 
 % ================================================================
-\section{Skills \& Expertise}
+\section{Honors \& Presentations}
 % ================================================================
 
 {\small
-\begin{tabularx}{\linewidth}{@{}lX@{}}
-  \textbf{Neuroimaging} & fMRI, dMRI, ASL preprocessing and analysis; network neuroscience; biomarker discovery \\
-  \textbf{Computation} & Meta-analysis, machine learning, statistics, dynamical systems modeling \\
-  \textbf{Programming} & Python, R, MATLAB, Bash, Git, full-stack web development \\
-  \textbf{Domain} & Psychedelic neuroscience, substance use disorders, PTSD, clinical trial methodology \\
-\end{tabularx}
+\textbf{Honors:} NSF Graduate Research Fellowship (2016--2022); Fulbright Research Grant Alternate (2022); Hiram S.\ \& Lawanda Allen Scholarship (2014); Magellan Scholarship for Undergraduate Research (2014). \\[0.15em]
+\textbf{Invited talks:} Winter Conf.\ on Brain Research (2025); NIAAA (2023); OPEN Foundation (2023); Maastricht Univ.\ (2022). \\[0.15em]
+\textbf{Posters:} ACNP (2026); Gordon Research Conf.\ (2025); OHBM (2021--2024); Psychedelic Science (2023).
 }
 
 % ================================================================
-\section{Selected Honors}
+\section{Interests}
 % ================================================================
 
-{\small
-\begin{tabularx}{\linewidth}{@{}lX@{}}
-  2022 & Fulbright Research Grant Alternate \\
-  2016--2022 & National Science Foundation Graduate Research Fellowship \\
-  2014 & Hiram S.\ and Lawanda Allen Scholarship for Excellence in Chemistry \\
-  2014 & Magellan Scholarship for Undergraduate Research \\
-\end{tabularx}
-}
-
-% ================================================================
-\section{Selected Presentations}
-% ================================================================
-
-{\small
-\begin{itemize}
-  \item \textbf{Invited:} Winter Conference on Brain Research (2025); NIAAA / Nora Volkow Group (2023); OPEN Foundation (2023); Maastricht University (2022); Oxford Psychedelic Society (2021).
-  \item \textbf{Posters:} ACNP (2026); Gordon Research Conference (2025); OHBM (2021--2024); Psychedelic Science (2023).
-\end{itemize}
-}
+{\small Urban farming, hiking, music, community building, parenting}
 
 \end{document}
 
