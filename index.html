@@ -5,76 +5,114 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Parker Singleton</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-	<header>
+
+	<!-- Navigation -->
+	<nav class="site-nav">
 		<div class="container">
-			<!--			<img src="images/headshot.png" alt="Parker Singleton">-->
-			<img src="images/headshot.png" alt="Parker Singleton" class="circular-image">
-			<h1>Parker Singleton</h1>
-			<h2 class="h2-spacing">Senior Reseacher in Neuroinformatics</h2>
-			<div class="social-icons">
-				<a href="https://scholar.google.com/citations?hl=en&user=0rCtfyIAAAAJ" target="_blank"><img
-						src="images/google-scholar-icon.png" alt="Google Scholar"></a>
-				<a href="https://twitter.com/singletonion" target="_blank"><img src="images/twitter-icon.png"
-						alt="Twitter"></a>
-				<a href="https://www.linkedin.com/in/spsingleton/" target="_blank"><img src="images/linkedin-icon.png"
-						alt="LinkedIn"></a>
-				<a href="https://github.com/singlesp" target="_blank"><img src="images/github-icon.png"
-						alt="GitHub"></a>
-				<!--				<a href="mailto:sps253@cornell.edu" target="_blank"><img src="images/email-icon.png" alt="Email"></a>-->
-				<a href="#" id="email-link" onclick="copyEmailToClipboard(event)"> <img src="images/email-icon.png"
-						alt="Email"></a>
-			</div>
-		</div>
-	</header>
-	<nav>
-		<div class="container">
-			<ul>
-				<li><a href="index.html">Home</a></li>
+			<a href="index.html" class="nav-brand">Parker Singleton</a>
+			<button class="nav-toggle" aria-label="Toggle navigation"
+				onclick="document.querySelector('.nav-links').classList.toggle('open')">
+				<span></span><span></span><span></span>
+			</button>
+			<ul class="nav-links">
+				<li><a href="index.html" class="active">Home</a></li>
 				<li><a href="research.html">Research</a></li>
 				<li><a href="media.html">Media</a></li>
 				<li><a href="cv.pdf" target="_blank">CV</a></li>
 			</ul>
 		</div>
 	</nav>
+
+	<!-- Hero -->
+	<section class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<img src="images/headshot.png" alt="Parker Singleton" class="hero-avatar">
+				<h1>Parker Singleton</h1>
+				<p class="subtitle">Senior Researcher in Neuroinformatics</p>
+				<div class="social-links">
+					<a href="https://scholar.google.com/citations?hl=en&user=0rCtfyIAAAAJ" target="_blank"
+						title="Google Scholar">
+						<i class="fas fa-graduation-cap"></i>
+					</a>
+					<a href="https://twitter.com/singletonion" target="_blank" title="Twitter / X">
+						<i class="fab fa-x-twitter"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/spsingleton/" target="_blank" title="LinkedIn">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+					<a href="https://github.com/singlesp" target="_blank" title="GitHub">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="#" id="email-link" onclick="copyEmail(event)" title="Copy email to clipboard">
+						<i class="fas fa-envelope"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
 	<main>
 		<div class="container">
-			<h1>About</h1>
-			<div class="aboutbody">
-				<p>I have a diverse academic and professional background spanning organic chemistry, neuroscience,
+			<h2 class="section-title">About</h2>
+			<div class="about-section">
+				<p>
+					I have a diverse academic and professional background spanning organic chemistry, neuroscience,
 					computational modeling, and teaching.
-					I am currently a senior research scientist at <a href="https://www.pennlinc.io"
-						target="_blank">PennLINC</a> where I lead research and development for the <a
-						href="https://sypres.io" target="_blank">SYPRES</a> initiative.
-					I'm also a member of the neuroinformatics team and take part in neuroimaing data curation and
-					analysis as a full-stack software engineer.
-					<br><br>
+				</p>
+				<p>
+					I am currently a senior research scientist at
+					<a href="https://www.pennlinc.io" target="_blank">PennLINC</a> where I lead research and
+					development for the <a href="https://sypres.io" target="_blank">SYPRES</a> initiative.
+					I'm also a member of the neuroinformatics team and take part in neuroimaging data curation
+					and analysis as a full-stack software engineer.
 				</p>
 			</div>
 		</div>
 	</main>
-	<footer>
+
+	<!-- Footer -->
+	<footer class="site-footer">
 		<div class="container">
-			<p>Copyright © Parker Singleton 2025</p>
+			<p>&copy; Parker Singleton 2025</p>
 		</div>
 	</footer>
+
+	<!-- Tooltip -->
+	<div class="copy-tooltip" id="copyTooltip">Email copied to clipboard!</div>
+
 	<script>
-		function copyEmailToClipboard(event) {
+		function copyEmail(event) {
 			event.preventDefault();
-
 			const email = 'sps253@cornell.edu';
-			const textarea = document.createElement('textarea');
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard.writeText(email).then(showTooltip);
+			} else {
+				const textarea = document.createElement('textarea');
+				textarea.value = email;
+				document.body.appendChild(textarea);
+				textarea.select();
+				document.execCommand('copy');
+				document.body.removeChild(textarea);
+				showTooltip();
+			}
+		}
 
-			textarea.value = email;
-			document.body.appendChild(textarea);
-			textarea.select();
-			document.execCommand('copy');
-			document.body.removeChild(textarea);
-
-			alert('Email address copied to clipboard!');
+		function showTooltip() {
+			const tooltip = document.getElementById('copyTooltip');
+			tooltip.classList.add('show');
+			setTimeout(() => tooltip.classList.remove('show'), 2000);
 		}
 	</script>
 

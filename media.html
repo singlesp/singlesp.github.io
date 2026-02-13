@@ -4,181 +4,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media - Parker Singleton</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Media – Parker Singleton</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <header>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
         <div class="container">
-            <!--			<img src="images/headshot.png" alt="Parker Singleton">-->
-            <img src="images/headshot.png" alt="Parker Singleton" class="circular-image">
-            <h1>Parker Singleton</h1>
-            <h2 class="h2-spacing">Senior Reseacher in Neuroinformatics</h2>
-            <div class="social-icons">
-                <a href="https://scholar.google.com/citations?hl=en&user=0rCtfyIAAAAJ" target="_blank"><img
-                        src="images/google-scholar-icon.png" alt="Google Scholar"></a>
-                <a href="https://twitter.com/singletonion" target="_blank"><img src="images/twitter-icon.png"
-                        alt="Twitter"></a>
-                <a href="https://www.linkedin.com/in/spsingleton/" target="_blank"><img src="images/linkedin-icon.png"
-                        alt="LinkedIn"></a>
-                <a href="https://github.com/singlesp" target="_blank"><img src="images/github-icon.png"
-                        alt="GitHub"></a>
-                <!--				<a href="mailto:sps253@cornell.edu" target="_blank"><img src="images/email-icon.png" alt="Email"></a>-->
-                <a href="#" id="email-link" onclick="copyEmailToClipboard(event)"> <img src="images/email-icon.png"
-                        alt="Email"></a>
-            </div>
-        </div>
-    </header>
-    <nav>
-        <div class="container">
-            <ul>
+            <a href="index.html" class="nav-brand">Parker Singleton</a>
+            <button class="nav-toggle" aria-label="Toggle navigation"
+                onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="media.html">Media</a></li>
+                <li><a href="media.html" class="active">Media</a></li>
                 <li><a href="cv.pdf" target="_blank">CV</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Media</h1>
+            <p>Conference posters, press coverage &amp; public talks</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
     <main>
         <div class="container">
-            <h1>Conference Posters</h1>
-            <section class="media-articles">
 
-                <ul style="list-style-type: none; padding-left: 0;">
-                    <li><a href="images/GRC_2025.jpg" target="_blank">GRC2025: A living systematic review,
-                            meta-analysis, and open data resource of trials of psilocybin treatment for symptoms
-                            of depression.</a></li>
-                    <li><a href="images/OHBM24.png" target="_blank">OHBM24: Altered structural connectivity and
-                            functional
-                            brain dynamics in individuals with heavy alcohol use elucidated via network control
-                            theory.</a></li>
-                    <li><a href="images/OHBM23.png" target="_blank">OHBM23: Time-resolved network control analysis links
-                            reduced control energy under DMT with the serotonin 2a receptor, signal diversity, and
-                            subjective experience.</a></li>
-                    <li><a href="images/PS2023.png" target="_blank">PS2023: Altered brain activity and functional
-                            connectivity after MDMA-assisted therapy for post-traumatic stress disorder.</a></li>
-                    <li><a href="images/OHBM22.png" target="_blank">OHBM22: LSD and psilocybin flatten the brain’s
-                            energy landscape: insights from receptor-informed network control theory.</a></li>
-                </ul>
-            </section>
-            <h1>Media</h1>
-            <section class="media-articles">
-                <h2>Print</h2>
-                <article>
-                    <article>
-                        <h3>Contributer: The Interdisciplinary Annotated Psychedelic Research Bibliography of 2024</h3>
-                        <p><a href="https://psychedelicalpha.com/news/the-interdisciplinary-annotated-psychedelic-research-bibliography-of-2024"
-                                target="_blank">Psychedelic Alpha (2025)</a></p>
-                    </article>
-                    <article>
+            <!-- Conference Posters -->
+            <h2 class="section-title">Conference Posters</h2>
+
+            <div class="poster-grid">
+
+                <div class="poster-card">
+                    <div class="poster-icon"><i class="fas fa-image"></i></div>
+                    <div class="poster-info">
+                        <a href="images/GRC_2025.jpg" target="_blank">
+                            <div class="poster-venue">GRC 2025</div>
+                            <div class="poster-title">A living systematic review, meta-analysis, and open data resource
+                                of trials
+                                of psilocybin treatment for symptoms of depression.</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-icon"><i class="fas fa-image"></i></div>
+                    <div class="poster-info">
+                        <a href="images/OHBM24.png" target="_blank">
+                            <div class="poster-venue">OHBM 2024</div>
+                            <div class="poster-title">Altered structural connectivity and functional brain dynamics in
+                                individuals
+                                with heavy alcohol use elucidated via network control theory.</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-icon"><i class="fas fa-image"></i></div>
+                    <div class="poster-info">
+                        <a href="images/OHBM23.png" target="_blank">
+                            <div class="poster-venue">OHBM 2023</div>
+                            <div class="poster-title">Time-resolved network control analysis links reduced control
+                                energy under DMT
+                                with the serotonin 2a receptor, signal diversity, and subjective experience.</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-icon"><i class="fas fa-image"></i></div>
+                    <div class="poster-info">
+                        <a href="images/PS2023.png" target="_blank">
+                            <div class="poster-venue">PS 2023</div>
+                            <div class="poster-title">Altered brain activity and functional connectivity after
+                                MDMA-assisted therapy
+                                for post-traumatic stress disorder.</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-icon"><i class="fas fa-image"></i></div>
+                    <div class="poster-info">
+                        <a href="images/OHBM22.png" target="_blank">
+                            <div class="poster-venue">OHBM 2022</div>
+                            <div class="poster-title">LSD and psilocybin flatten the brain's energy landscape: insights
+                                from
+                                receptor-informed network control theory.</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Press & Media -->
+            <h2 class="section-title" style="margin-top: 3rem;">Press &amp; Media</h2>
+
+            <div class="media-grid">
+
+                <div class="media-item">
+                    <a href="https://psychedelicalpha.com/news/the-interdisciplinary-annotated-psychedelic-research-bibliography-of-2024"
+                        target="_blank">
+                        <h3>Contributor: The Interdisciplinary Annotated Psychedelic Research Bibliography of 2024</h3>
+                        <div class="media-source">Psychedelic Alpha · 2025</div>
+                    </a>
+                </div>
+
+                <div class="media-item">
+                    <a href="https://www.psypost.org/scientists-reveal-how-dmt-alters-brain-activity-and-consciousness-by-lowering-control-energy/"
+                        target="_blank">
                         <h3>Scientists reveal how DMT alters brain activity and consciousness by lowering control energy
                         </h3>
-                        <p><a href="https://www.psypost.org/scientists-reveal-how-dmt-alters-brain-activity-and-consciousness-by-lowering-control-energy/"
-                                target="_blank">PsyPost (2025)</a></p>
-                    </article>
-                    <article>
-                        <h3>Contributer: The Interdisciplinary Annotated Psychedelic Research Bibliography of 2023</h3>
-                        <p><a href="https://psychedelicalpha.com/news/2023-annotated-interdisciplinary-psychedelics-bibliography"
-                                target="_blank">Psychedelic Alpha (2024)</a></p>
-                    </article>
-                    <article>
+                        <div class="media-source">PsyPost · 2025</div>
+                    </a>
+                </div>
+
+                <div class="media-item">
+                    <a href="https://psychedelicalpha.com/news/2023-annotated-interdisciplinary-psychedelics-bibliography"
+                        target="_blank">
+                        <h3>Contributor: The Interdisciplinary Annotated Psychedelic Research Bibliography of 2023</h3>
+                        <div class="media-source">Psychedelic Alpha · 2024</div>
+                    </a>
+                </div>
+
+                <div class="media-item">
+                    <a href="https://www.psypost.org/2023/04/mdma-assisted-therapy-appears-to-alter-how-the-brain-responds-to-symptom-provocation-in-patients-with-ptsd-77298"
+                        target="_blank">
                         <h3>MDMA-assisted therapy appears to alter how the brain responds to symptom provocation in
                             patients with PTSD</h3>
-                        <p><a href="https://www.psypost.org/2023/04/mdma-assisted-therapy-appears-to-alter-how-the-brain-responds-to-symptom-provocation-in-patients-with-ptsd-77298"
-                                target="_blank">PsyPost (2023)</a></p>
-                    </article>
-                    <h3>Panel: Neuroimaging in Psychedelic Research</h3>
-                    <p><a href="https://psychedelicalpha.com/news/panel-neuroimaging-in-psychedelic-research"
-                            target="_blank">Psychedelic Alpha 2022 Year in Review (2023)</a></p>
-                </article>
-                <article>
-                    <h3>Press Release: MDMA-AT Neuroimaging Paper</h3>
-                    <p><a href="https://mapsbcorp.com/press-releases/maps-pbc-announces-frontiers-in-psychiatry-published-first-study-to-evaluate-neural-impact-of-mdma-assisted-therapy-in-patients-with-ptsd/"
-                            target="_blank">MAPS PBC (2023)</a></p>
-                </article>
-                <article>
-                    <h3>Psychedelic drugs flatten the brain’s dynamic landscape</h3>
-                    <p><a href="https://news.cornell.edu/stories/2022/10/psychedelic-drugs-flatten-brains-dynamic-landscape"
-                            target="_blank">Cornell Chronicle (2022)</a></p>
-                </article>
-                <article>
-                    <h3>LSD and the Anarchic Brain</h3>
-                    <p><a href="https://psychedelicreview.com/lsd-and-the-anarchic-brain/" target="_blank">Psychedelic
-                            Science Review (2021)</a></p>
-                </article>
-                <!-- Add more articles as needed -->
-            </section>
+                        <div class="media-source">PsyPost · 2023</div>
+                    </a>
+                </div>
 
-            <section class="youtube-talks">
-                <h2>Public Talks</h2>
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yE6NuOi3BAI" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <p>Dissertation Defense Seminar: This is Your Brain on Drugs - <a
-                            href="https://youtu.be/yE6NuOi3BAI" target="_blank">Watch on YouTube</a></p>
+                <div class="media-item">
+                    <a href="https://psychedelicalpha.com/news/panel-neuroimaging-in-psychedelic-research"
+                        target="_blank">
+                        <h3>Panel: Neuroimaging in Psychedelic Research</h3>
+                        <div class="media-source">Psychedelic Alpha 2022 Year in Review · 2023</div>
+                    </a>
                 </div>
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iV0CcJzOk6E" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <p>Interdisciplinary Conference on Psychedelic Research (ICPR2022): Neuroimaging in MDMA assisted
-                        therapy - <a href="https://youtu.be/iV0CcJzOk6E" target="_blank">Watch on YouTube</a></p>
-                </div>
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/khaVhAL9NFQ" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <p>Psychedemia 2022: Psychedelics flatten the brain's control energy landscape - <a
-                            href="https://youtu.be/khaVhAL9NFQ" target="_blank">Watch on YouTube</a></p>
-                </div>
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wwovwxFuwUE" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <p>Oxford Psychedelic Society 2021: Panel - The flowing brain on psychedelics - <a
-                            href="https://youtu.be/wwovwxFuwUE" target="_blank">Watch on YouTube</a></p>
-                </div>
-                <!-- Add more video wrappers as needed -->
 
-            </section>
-            <section class="media-articles">
+                <div class="media-item">
+                    <a href="https://mapsbcorp.com/press-releases/maps-pbc-announces-frontiers-in-psychiatry-published-first-study-to-evaluate-neural-impact-of-mdma-assisted-therapy-in-patients-with-ptsd/"
+                        target="_blank">
+                        <h3>Press Release: MDMA-AT Neuroimaging Paper</h3>
+                        <div class="media-source">MAPS PBC · 2023</div>
+                    </a>
+                </div>
 
-                <ul style="list-style-type: none; padding-left: 0;">
-                    <li><a href="https://www.crowdcast.io/e/ccnsv3/23" target="_blank">CCNSv2: Evidence for a flattened
-                            energy landscape under LSD and psilocybin.</a></li>
-                </ul>
-            </section>
-            <!--            <section class="podcasts">-->
-            <!--                <h2>Podcasts</h2>-->
-            <!--                <article>-->
-            <!--                    <h3>Podcast Title</h3>-->
-            <!--                    <p>Podcast description or excerpt. <a href="https://www.example.com/podcast-link" target="_blank">Listen here</a></p>-->
-            <!--                </article>-->
-            <!--                <!-- Add more podcasts as needed -->
-            <!--            </section>-->
+                <div class="media-item">
+                    <a href="https://news.cornell.edu/stories/2022/10/psychedelic-drugs-flatten-brains-dynamic-landscape"
+                        target="_blank">
+                        <h3>Psychedelic drugs flatten the brain's dynamic landscape</h3>
+                        <div class="media-source">Cornell Chronicle · 2022</div>
+                    </a>
+                </div>
+
+                <div class="media-item">
+                    <a href="https://psychedelicreview.com/lsd-and-the-anarchic-brain/" target="_blank">
+                        <h3>LSD and the Anarchic Brain</h3>
+                        <div class="media-source">Psychedelic Science Review · 2021</div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Public Talks -->
+            <h2 class="section-title" style="margin-top: 3rem;">Public Talks</h2>
+
+            <div class="talks-grid">
+
+                <div class="talk-card">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/yE6NuOi3BAI"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="talk-info">
+                        <p>Dissertation Defense Seminar: <em>This is Your Brain on Drugs</em> –
+                            <a href="https://youtu.be/yE6NuOi3BAI" target="_blank">Watch on YouTube</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/iV0CcJzOk6E"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="talk-info">
+                        <p>ICPR 2022: <em>Neuroimaging in MDMA Assisted Therapy</em> –
+                            <a href="https://youtu.be/iV0CcJzOk6E" target="_blank">Watch on YouTube</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/khaVhAL9NFQ"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="talk-info">
+                        <p>Psychedemia 2022: <em>Psychedelics Flatten the Brain's Control Energy Landscape</em> –
+                            <a href="https://youtu.be/khaVhAL9NFQ" target="_blank">Watch on YouTube</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="talk-card">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/wwovwxFuwUE"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="talk-info">
+                        <p>Oxford Psychedelic Society 2021: <em>Panel – The Flowing Brain on Psychedelics</em> –
+                            <a href="https://youtu.be/wwovwxFuwUE" target="_blank">Watch on YouTube</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Other Talks -->
+            <h3 class="section-subtitle" style="margin-top: 2rem;">Other Talks</h3>
+            <ul class="other-talks">
+                <li><a href="https://www.crowdcast.io/e/ccnsv3/23" target="_blank">CCNSv2: Evidence for a flattened
+                        energy landscape under LSD and psilocybin</a></li>
+            </ul>
+
         </div>
     </main>
-    <footer>
+
+    <!-- Footer -->
+    <footer class="site-footer">
         <div class="container">
-            <p>Copyright © Parker Singleton 2025</p>
+            <p>&copy; Parker Singleton 2025</p>
         </div>
     </footer>
+
+    <!-- Tooltip -->
+    <div class="copy-tooltip" id="copyTooltip">Email copied to clipboard!</div>
+
     <script>
-        function copyEmailToClipboard(event) {
+        function copyEmail(event) {
             event.preventDefault();
-
             const email = 'sps253@cornell.edu';
-            const textarea = document.createElement('textarea');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(showTooltip);
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showTooltip();
+            }
+        }
 
-            textarea.value = email;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-
-            alert('Email address copied to clipboard!');
+        function showTooltip() {
+            const tooltip = document.getElementById('copyTooltip');
+            tooltip.classList.add('show');
+            setTimeout(() => tooltip.classList.remove('show'), 2000);
         }
     </script>
 
