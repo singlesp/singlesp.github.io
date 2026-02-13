@@ -1,0 +1,381 @@
+%!TEX program = pdflatex
+\documentclass[11pt, letterpaper]{article}
+
+% ---- Packages ----
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{tgpagella}              % Palatino-style serif
+\usepackage[scaled=0.88]{berasans}  % Clean sans-serif for headings
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{etaremune}  % reverse-numbered lists
+
+% ---- Colors ----
+\definecolor{accent}{HTML}{1a2332}
+\definecolor{link}{HTML}{2563eb}
+\definecolor{rule}{HTML}{cbd5e1}
+\definecolor{light}{HTML}{64748b}
+
+% ---- Hyperlinks ----
+\hypersetup{
+  colorlinks=true,
+  linkcolor=link,
+  urlcolor=link,
+  pdfauthor={S. Parker Singleton},
+  pdftitle={Curriculum Vitae},
+}
+
+% ---- Section Formatting ----
+\titleformat{\section}
+  {\Large\sffamily\bfseries\color{accent}}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.6em}\textcolor{rule}{\rule{\linewidth}{0.8pt}}]
+
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+
+\titleformat{\subsection}
+  {\normalsize\sffamily\bfseries\color{accent}}
+  {}
+  {0em}
+  {}
+
+\titlespacing*{\subsection}{0pt}{0.8em}{0.3em}
+
+% ---- List Formatting ----
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=3pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=3pt}
+
+% ---- Header / Footer ----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{light} S.\ Parker Singleton \textbullet\ Curriculum Vitae \textbullet\ Page \thepage\ of \pageref{LastPage}}
+
+% ---- Custom Commands ----
+\newcommand{\entry}[4]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}p{3.1cm}X@{}}
+    \textcolor{light}{\small #1} &
+    \textbf{#2} \\
+    & \textit{#3} \\
+    & #4
+  \end{tabularx}
+  \vspace{0.4em}
+}
+
+\newcommand{\entryshort}[3]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}p{3.1cm}X@{}}
+    \textcolor{light}{\small #1} &
+    \textbf{#2} \\
+    & \textit{#3}
+  \end{tabularx}
+  \vspace{0.3em}
+}
+
+\newcommand{\me}{\textbf{S.\ P.\ Singleton}}
+
+% ============================================================
+\begin{document}
+\thispagestyle{fancy}
+
+% ---- Title Block ----
+\begin{center}
+  {\Huge\sffamily\bfseries\color{accent} S.\ Parker Singleton}\\[0.5em]
+  {\small
+    \href{mailto:sps253@cornell.edu}{sps253@cornell.edu}
+    \enspace\textbullet\enspace
+    \href{https://singlesp.github.io}{singlesp.github.io}
+    \enspace\textbullet\enspace
+    \href{https://sypres.io}{sypres.io}
+  }
+\end{center}
+
+\vspace{0.5em}
+
+% ================================================================
+\section{Education}
+% ================================================================
+
+\entryshort{2020 -- 2023}{Ph.D.\ Computational Biology}{Cornell University}
+
+\entryshort{2015 -- 2017}{M.S.\ Chemistry}{Cornell University}
+
+\entryshort{2011 -- 2015}{B.S.\ Chemistry}{University of South Carolina}
+
+% ================================================================
+\section{Professional Experience}
+% ================================================================
+
+\entry{2025 -- Present}
+  {Senior Scientist}
+  {Penn Lifespan Informatics and Neuroimaging Center (PennLINC), University of Pennsylvania}
+  {Advisor: Theodore D.\ Satterthwaite \newline
+   Research and development lead for \href{https://sypres.io}{SYPRES} --- an initiative to present high-quality living evidence synthesis in clinical psychedelics. \newline
+   Member of the neuroinformatics team: neuroimaging dataset curation, analysis, and release; full-stack software engineering.}
+
+\entry{2024 -- 2025}
+  {Postdoctoral Researcher}
+  {Penn Lifespan Informatics and Neuroimaging Center (PennLINC), University of Pennsylvania}
+  {Advisor: Theodore D.\ Satterthwaite \newline
+   Assessed the clinical efficacy and risks of psychedelic-assisted therapies. \newline
+   Developed new tools and frameworks for measuring psychedelic-induced functional plasticity in the brain using fMRI.}
+
+\entry{2023 -- 2024}
+  {Postdoctoral Researcher}
+  {Computational Connectomics Lab, Weill Cornell Medicine}
+  {Advisor: Amy Kuceyeski \newline
+   Studied the effects of pharmacology, substance use, and trauma on human brain activity/connectivity using network control theory and multimodal neuroimaging. \newline
+   Mentored undergraduate and graduate students on rotation and thesis projects.}
+
+\entry{2020 -- 2023}
+  {NSF Graduate Research Fellow}
+  {Department of Computational Biology, Cornell University}
+  {Advisor: Amy Kuceyeski \newline
+   Studied the effects of psychedelics on human brain activity/connectivity in the Computational Connectomics Lab. \newline
+   Utilized advanced techniques in network control theory, statistics, and machine learning to quantify brain dynamics. \newline
+   Identified neural correlates of MDMA-assisted therapy for PTSD using audio script-driven memory recollection during fMRI.}
+
+\entry{2017 -- 2020}
+  {High School Teacher}
+  {Palmetto Scholars Academy, North Charleston, SC}
+  {Designed and implemented a diverse 10th grade chemistry curriculum for intellectually gifted students. \newline
+   Instructor of dual-enrollment Chemistry 110/111 lecture and lab. \newline
+   Instructor of Introduction to Research course preparing juniors for their senior capstone project. \newline
+   Utilized a project-based-learning curriculum for an experimental chemistry elective.}
+
+\entry{2015 -- 2017}
+  {Graduate Research Assistant}
+  {Department of Chemistry \& Chemical Biology, Cornell University}
+  {Advisor: Brett P.\ Fors \newline
+   Developed novel catalyst systems for controlling polymer topology \textit{in situ}, utilizing visible light as an external stimulus. \newline
+   Structure--property relationships studied via NMR, rheology, and SAXS. \newline
+   Random forest classifier implemented to map structure--property relationships.}
+
+\entry{2013 -- 2015}
+  {Undergraduate Researcher}
+  {Department of Chemistry \& Biochemistry, University of South Carolina}
+  {Advisor: Chuanbing Tang \newline
+   Development and classification of cationic, rosin acid-derived compounds and polymers as novel antimicrobial agents. \newline
+   Surface-initiated ATRP modification of glass surfaces for medical device and implant applications.}
+
+\entry{2013 -- 2014}
+  {Applications/Development Chemist Intern I \& II}
+  {MeadWestvaco (now Ingevity), North Charleston, SC}
+  {Performed ladder studies involving HM-PSA formulation and preparation, physical and rheological testing, followed by multivariate analysis (PCA, PLSA) for iterative product screening. \newline
+   Explored synthetic pathways for the development of new products with targeted end-use properties in adhesive systems.}
+
+% ================================================================
+\section{Publications}
+% ================================================================
+
+\subsection{Original Research}
+
+\begin{etaremune}[itemsep=5pt]
+  \item P.\ Mallaroni, \me, N.\ L.\ Mason, T.\ D.\ Satterthwaite, J.\ G.\ Ramaekers.
+    ``Spatiotemporal mapping of brain organisation following the administration of 2C-B and psilocybin.''
+    \textit{Molecular Psychiatry}, 2026.
+    \href{https://doi.org/10.1038/s41380-026-03447-0}{doi: 10.1038/s41380-026-03447-0}.
+
+  \item A.\ I.\ Luppi, L.\ Uhrig, J.\ Tasserie, P.\ A.\ M.\ Mediano, F.\ E.\ Rosas, \me, D.\ Gutierrez-Barragan, S.\ Gini, P.\ Castro, C.\ M.\ Signorelli, D.\ Golkowski, A.\ Ranft, R.\ Ilg, D.\ Jordan, K.\ Muta, J.\ Hata, H.\ Okano, Z.-Q.\ Liu, Y.\ Yee, A.\ Destexhe, R.\ Cofre, D.\ K.\ Menon, A.\ Gozzi, B.\ Jarraya, E.\ A.\ Stamatakis.
+    ``Convergent transcriptomic and connectomic controllers of information integration and its anaesthetic breakdown across mammalian brains.''
+    \textit{Nature Human Behaviour}, 2025.
+    \href{https://doi.org/10.1038/s41562-025-02381-5}{doi: 10.1038/s41562-025-02381-5}.
+
+  \item L.\ Schilling, \me, C.\ Tozlu, M.\ H\'{e}do, Q.\ Zhao, K.\ M.\ Pohl, K.\ Jamison, A.\ Kuceyeski.
+    ``Sex-specific differences in brain activity dynamics of youth with a family history of substance use disorder.''
+    \textit{Nature Mental Health}, 2025.
+    \href{https://doi.org/10.1038/s44220-025-00523-2}{doi: 10.1038/s44220-025-00523-2}.
+
+  \item D.\ P.\ Kelley, \me, K.\ Venable, G.\ Sturm, A.\ Skovgaard, J.\ Francis, T.\ C.\ Neylan, E.\ R.\ Bradley, J.\ Woolley, M.\ Picard, A.\ O'Donovan.
+    ``The allostatic triage model of psychopathology (ATP Model): How reallocation of brain energetic resources under stress elicits psychiatric symptoms.''
+    \textit{Neuroscience \& Biobehavioral Reviews}, 2025.
+    \href{https://doi.org/10.1016/j.neubiorev.2025.106419}{doi: 10.1016/j.neubiorev.2025.106419}.
+
+  \item N.\ Roy, \me, K.\ Jamison, P.\ Mukherjee, S.\ A.\ Shah, A.\ Kuceyeski.
+    ``Brain activity dynamics after traumatic brain injury indicate increased state transition energy and preference of lower order states.''
+    \textit{NeuroImage: Clinical}, 2025.
+    \href{https://doi.org/10.1016/j.nicl.2025.103799}{doi: 10.1016/j.nicl.2025.103799}.
+
+  \item \me, C.\ Timmermann, A.\ I.\ Luppi, E.\ Eckern\"{a}s, L.\ Roseman, R.\ L.\ Carhart-Harris, A.\ Kuceyeski.
+    ``Network control energy reductions under DMT relate to serotonin receptors, signal diversity, and subjective experience.''
+    \textit{Communications Biology}, 2025.
+    \href{https://doi.org/10.1038/s42003-025-08078-9}{doi: 10.1038/s42003-025-08078-9}.
+
+  \item A.\ I.\ Luppi, \me, J.\ Y.\ Hansen, K.\ W.\ Jamison, D.\ Bzdok, A.\ Kuceyeski, R.\ F.\ Betzel, B.\ Misic.
+    ``Contributions of network structure, chemoarchitecture and diagnostic categories to transitions between cognitive topographies.''
+    \textit{Nature Biomedical Engineering}, 2024.
+    \href{https://doi.org/10.1038/s41551-024-01242-2}{doi: 10.1038/s41551-024-01242-2}.
+
+  \item \me, P.\ Velidi, L.\ Schilling, A.\ I.\ Luppi, K.\ Jamison, L.\ Parkes, A.\ Kuceyeski.
+    ``Altered structural connectivity and functional brain dynamics in individuals with heavy alcohol use elucidated via network control theory.''
+    \textit{Biological Psychiatry: Cognitive Neuroscience and Neuroimaging}, 2024.
+    \href{https://doi.org/10.1016/j.bpsc.2024.05.006}{doi: 10.1016/j.bpsc.2024.05.006}.
+
+  \item \me.
+    ``This Is Your Brain on Drugs: A Multimodal Neuroimaging and Computational Investigation into the Effects of Psychedelic Tryptamines and MDMA on Human Brain Dynamics.''
+    \textit{Doctoral Dissertation, Cornell University; ProQuest Dissertations \& Theses}, 2023. 30420106.
+
+  \item \me, J.\ B.\ Wang, M.\ Mithoefer, C.\ Hanlon, M.\ S.\ George, A.\ Mithoefer, O.\ Mithoefer, A.\ R.\ Coker, B.\ Yazar-Klosinski, A.\ Emerson, R.\ Doblin, A.\ Kuceyeski.
+    ``Altered brain activity and functional connectivity after MDMA-assisted therapy for post-traumatic stress disorder.''
+    \textit{Frontiers in Psychiatry}, 2023; 13:947622.
+    \href{https://doi.org/10.3389/fpsyt.2022.947622}{doi: 10.3389/fpsyt.2022.947622}.
+
+  \item \me, A.\ I.\ Luppi, R.\ L.\ Carhart-Harris, J.\ Cruzat, L.\ Roseman, D.\ J.\ Nutt, G.\ Deco, M.\ L.\ Kringelbach, E.\ A.\ Stamatakis, A.\ Kuceyeski.
+    ``Receptor-informed network control theory links LSD and psilocybin to a flattening of the brain's control energy landscape.''
+    \textit{Nature Communications}, 2022.
+    \href{https://doi.org/10.1038/s41467-022-33578-1}{doi: 10.1038/s41467-022-33578-1}.
+
+  \item M.\ Nadgorny, D.\ T.\ Gentekos, Z.\ Xiao, \me, B.\ P.\ Fors, L.\ A.\ Connal.
+    ``Manipulation of Molecular Weight Distribution Shape as a New Strategy to Control Processing Parameters.''
+    \textit{Macromolecular Rapid Communications}, 2017.
+    \href{https://doi.org/10.1002/marc.201700352}{doi: 10.1002/marc.201700352}.
+
+  \item M.\ S.\ Ganewatta, K.\ P.\ Miller, \me, P.\ Mehrpouya-Bahrami, Y.\ P.\ Chen, Y.\ Yan, M.\ Nagarkatti, P.\ Nagarkatti, A.\ W.\ Decho, C.\ Tang.
+    ``Antibacterial and Biofilm-Disrupting Coatings from Resin Acid-Derived Materials.''
+    \textit{Biomacromolecules}, 2015.
+    \href{https://doi.org/10.1021/acs.biomac.5b01005}{doi: 10.1021/acs.biomac.5b01005}.
+\end{etaremune}
+
+\subsection{Commentaries \& Perspectives}
+
+\begin{itemize}[label=\textbullet]
+  \item \me, B.\ L.\ Sevchik, S.\ N.\ Vandekar, E.\ C.\ Strain, S.\ M.\ Nayak, R.\ H.\ Dworkin, J.\ C.\ Scott, T.\ D.\ Satterthwaite.
+    ``An initiative for living evidence synthesis in clinical psychedelic research.''
+    \textit{Nature Mental Health}, 2025.
+    \href{https://doi.org/10.1038/s44220-024-00373-4}{doi: 10.1038/s44220-024-00373-4}.
+
+  \item \me, A.\ Kuceyeski.
+    ``Bridging Psilocybin-Induced Changes in the Brain's Dynamic Functional Connectome With an Individual's Subjective Experience.''
+    \textit{Biological Psychiatry: Cognitive Neuroscience and Neuroimaging}, 2024.
+    \href{https://doi.org/10.1016/j.bpsc.2024.05.003}{doi: 10.1016/j.bpsc.2024.05.003}.
+\end{itemize}
+
+% ================================================================
+\section{Presentations}
+% ================================================================
+
+\subsection{Invited Talks, Panels \& Workshops}
+
+\begin{itemize}
+  \item ``Novel treatments for PTSD: focus on fear conditioning as a translational model.'' The Winter Conference on Brain Research, Lake Tahoe, 2025.
+  \item ``Pharmacologically-informed network control theory.'' The Nora Volkow group at the National Institute on Alcohol Abuse and Alcoholism, online, 2023.
+  \item ``Unlocking DMT Horizons: Exploring the clinical potential of DMT.'' OPEN Foundation, online, 2023.
+  \item ``Harnessing neural and cognitive plasticity with psychedelics.'' Cleveland Clinic Psychedelic Science Group, online, 2022.
+  \item ``Modeling brain dynamics using psychedelics.'' Maastricht University, Netherlands, 2022.
+  \item ``The flowing brain on psychedelics.'' Oxford Psychedelic Society, online, 2021.
+  \item ``Chemistry and Music Workshop.'' American Chemical Society National Meeting, Orlando, FL, 2019.
+\end{itemize}
+
+\subsection{Oral Presentations}
+
+\begin{itemize}
+  \item ``This is your brain on drugs: A multimodal neuroimaging and computational investigation into the effects of psychedelics and MDMA on human brain dynamics.'' Dissertation Defense Seminar, Department of Computational Biology, Cornell University, 2023.
+  \item ``Altered neural activity patterns following MDMA-assisted therapy for PTSD: an fMRI pilot study.'' Interdisciplinary Conference on Psychedelic Research, Haarlem, Netherlands, 2022.
+  \item ``A flattened energy landscape under LSD and psilocybin: how psychedelics advance our ability to model brain dynamics.'' Psychedemia: Neuroscience Panel, Columbus, OH, 2022.
+  \item ``Evidence for a flattened energy landscape under LSD and Psilocybin.'' Canadian Computational Neuroscience Spotlight, online, 2022.
+  \item ``Neurobiology of MDMA-assisted therapy for PTSD.'' Cornell Computational Biology Student Seminar Series, Ithaca, NY, 2022.
+  \item ``LSD flattens the brain's energy landscape: insights from receptor-informed network control theory.'' Cornell Computational Biology Student Seminar Series, Ithaca, NY, 2021.
+  \item ``Antibacterial and Biofilm-Disrupting Coating Sustainable Materials.'' University of South Carolina Discovery Day for Undergraduate Researchers, Columbia, SC, 2015.
+  \item ``Antibacterial and Biofilm-Disrupting Coating Sustainable Materials.'' Southeastern Undergraduate Research Conference, Montgomery, AL, 2015.
+\end{itemize}
+
+\subsection{Poster Presentations}
+
+\begin{itemize}
+  \item ``A living systematic review, meta-analysis, and open data resource of trials of psilocybin treatment for symptoms of depression.'' ACNP, Hollywood, FL, 2025.
+  \item ``A living systematic review, meta-analysis, and open data resource of trials of psilocybin treatment for symptoms of depression.'' Gordon Research Conference: Neurobiology of Psychedelics, Smithfield, RI, 2025.
+  \item ``Altered structural connectivity and functional brain dynamics in individuals with heavy alcohol use elucidated via network control theory.'' Organization for Human Brain Mapping, Seoul, South Korea, 2024.
+  \item ``Time-resolved network control analysis of human brain dynamics under DMT.'' Organization for Human Brain Mapping, Montreal, Canada, 2023.
+  \item ``Altered brain activity and functional connectivity after MDMA-assisted therapy for post-traumatic stress disorder.'' Psychedelic Science 2023, Denver, CO, 2023.
+  \item ``LSD and psilocybin flatten the brain's energy landscape: insights from receptor-informed network control theory.'' Organization for Human Brain Mapping, Glasgow, U.K., 2022.
+  \item ``Evidence for altered neural activity patterns after MDMA-assisted therapy in adults with chronic and severe PTSD: a pilot study.'' Organization for Human Brain Mapping, Glasgow, U.K., 2022.
+  \item ``LSD and psilocybin flatten the brain's energy landscape: insights from receptor-informed network control theory.'' From Research to Reality: Global Summit on Psychedelic Therapies and Medicine, Toronto, CA, 2022.
+  \item ``Evidence for altered neural activity patterns after MDMA-assisted therapy in adults with chronic and severe PTSD: a pilot study.'' From Research to Reality: Global Summit on Psychedelic Therapies and Medicine, Toronto, CA, 2022.
+  \item ``LSD flattens the brain's energy landscape: insights from receptor-informed network control theory.'' Organization for Human Brain Mapping, online, 2021.
+  \item ``Sustainable Antimicrobial Coatings from Resin Acids.'' American Chemical Society Awards Day, Orangeburg, SC, 2014.
+\end{itemize}
+
+% ================================================================
+\section{Teaching \& Outreach}
+% ================================================================
+
+\entryshort{2023 -- Present}
+  {Machine Learning in Medicine Virtual Seminar Series}
+  {Cornell University}
+\vspace{-0.3em}
+\begin{itemize}
+  \item Inter-campus collaborative bringing together researchers with common interests in machine learning applied to clinical questions and data.
+  \item Invite and host speakers from academia and industry for regular virtual seminar series.
+\end{itemize}
+\vspace{0.3em}
+
+\entryshort{2019 -- 2022}
+  {Advisor, High School Senior Capstone Experience}
+  {Palmetto Scholars Academy, North Charleston, SC}
+\vspace{-0.3em}
+\begin{itemize}
+  \item Mentored high school students to develop, plan, and perform thesis research; students carry out hands-on research, write a thesis, and defend before a committee.
+\end{itemize}
+\vspace{0.3em}
+
+\entryshort{2017 -- 2018}
+  {Head Coach, VEX High School Robotics}
+  {Palmetto Scholars Academy, North Charleston, SC}
+\vspace{-0.3em}
+\begin{itemize}
+  \item Coached 4 teams during the 2017--2018 In The Zone challenge; teams earned 2 Excellence Awards, 2 Design Awards, and 1 Tournament Champions award; 2 teams advanced to SC State Tournament; 1 advanced to the US CREATE Open.
+\end{itemize}
+\vspace{0.3em}
+
+\entryshort{2016 -- 2017}{Outreach Coordinator}{Fors Research Group, Cornell University}
+
+\entryshort{2015 -- 2017}{Families Learning Science Together Workshop Volunteer}{Cornell Center for Materials Research}
+
+\entryshort{2015 -- 2016}{Graduate Teaching Assistant, Organic Chemistry Lab}{Cornell University}
+
+\entryshort{Oct -- Nov 2015}{Family Science Nights Module Instructor}{Sciencenter Museum, Ithaca, NY}
+
+\entryshort{Jan -- May 2013}{Teaching Assistant, General Chemistry Lab}{University of South Carolina}
+
+% ================================================================
+\section{Honors \& Awards}
+% ================================================================
+
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+  2022 & Fulbright Research Grant Alternate \\
+  2016 -- 2022 & National Science Foundation Graduate Research Fellowship \\
+  2015 & Graduation with Leadership Distinction in Research \\
+  2015 & University of South Carolina Outstanding Senior Award \\
+  2015 & Who's Who Among American Colleges and Universities Award \\
+  2015 & Hypercube Scholar Award \\
+  2014 & Hiram S.\ and Lawanda Allen Scholarship for Excellence in Chemistry \\
+  2014 & Magellan Scholarship for Undergraduate Research \\
+  2014 & Outstanding Poster Presentation, SC ACS Awards Day \\
+  2011 -- 2015 & South Carolina Palmetto Fellows Scholar \\
+  2011 -- 2015 & USC Dean's Scholar \\
+\end{tabularx}
+
+% ================================================================
+\section{Volunteer Experience}
+% ================================================================
+
+\entryshort{2017 -- 2023}{President, Homeowner's Association}{Jericho on the Ashley, North Charleston, SC}
+
+\entryshort{October 2016}{Service Volunteer}{Montgomery Park Playground Build, Dryden, NY}
+
+\entryshort{2013 -- 2015}{President \& Founder, Recycling Committee}{Gates at Williams-Brice, Columbia, SC}
+
+\entryshort{Summers 2013--14}{Service Volunteer}{The Hope Lodge, American Cancer Society, Charleston, SC}
+
+\end{document}
+
