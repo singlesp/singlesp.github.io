@@ -299,6 +299,7 @@ main {
 }
 
 .consulting-list li {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -308,6 +309,7 @@ main {
   background: var(--color-border-light);
   border-radius: var(--radius-sm);
   transition: all var(--transition);
+  cursor: default;
 }
 
 .consulting-list li:hover {
@@ -320,6 +322,41 @@ main {
   width: 1.25rem;
   text-align: center;
   flex-shrink: 0;
+}
+
+.consulting-desc {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(-50%) translateY(4px);
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+}
+
+.consulting-desc::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--color-primary);
+}
+
+.consulting-list li:hover .consulting-desc {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* --- Publication Cards --- */
