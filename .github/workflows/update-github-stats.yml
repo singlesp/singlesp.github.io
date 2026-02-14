@@ -1,0 +1,36 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday at 06:00 UTC
+  workflow_dispatch:        # Manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch GitHub activity stats
+        env:
+          # Uses the built-in token by default.
+          # For higher rate limits or private-repo access, add a
+          # GH_PAT secret (fine-grained PAT with public_repo read).
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
+        run: python scripts/update_github_stats.py
+
+      - name: Commit updated stats
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-stats.json
+          git diff --cached --quiet || git commit -m "chore: update GitHub activity stats"
+          git push
+

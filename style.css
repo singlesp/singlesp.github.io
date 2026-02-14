@@ -628,6 +628,154 @@ main {
   font-weight: 500;
 }
 
+/* --- GitHub Activity Stats --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.stat-card {
+  background: var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all var(--transition);
+}
+
+.stat-card:hover {
+  background: var(--color-border);
+}
+
+.stat-card i {
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin-bottom: 0.15rem;
+}
+
+.stat-value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Project cards */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-card {
+  background: var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+}
+
+.project-card:hover {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.project-header a {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+
+.project-header a:hover {
+  color: var(--color-accent);
+}
+
+.project-org {
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-size: 0.9em;
+}
+
+.project-lang {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.project-summary {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.project-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.project-meta i {
+  font-size: 0.7rem;
+}
+
+.meta-added {
+  color: #16a34a;
+}
+
+.meta-removed {
+  color: #dc2626;
+}
+
+.github-updated {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  text-align: right;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 /* --- Footer --- */
 .site-footer {
   background: var(--color-footer-bg);
@@ -736,6 +884,19 @@ main {
 
   .section-title {
     font-size: 1.4rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.35rem;
+  }
+
+  .project-card {
+    padding: 1rem 1.15rem;
   }
 
   /* Show consulting descriptions inline on mobile instead of hover tooltips */

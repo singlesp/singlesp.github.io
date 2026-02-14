@@ -129,6 +129,18 @@
 					</p>
 				</div>
 			</div>
+
+			<!-- GitHub Activity -->
+			<h2 class="section-title" style="margin-top: 2.5rem;">GitHub Activity</h2>
+			<div class="about-section" id="github-activity">
+				<div class="stats-grid" id="stats-grid">
+					<!-- Populated by JS from github-stats.json -->
+				</div>
+				<h3 class="section-subtitle" style="margin-top: 1.5rem;">Active Projects</h3>
+				<div class="projects-list" id="projects-list"></div>
+				<p class="github-updated" id="github-updated"></p>
+			</div>
+		</div><!-- /.container -->
 	</main>
 
 	<!-- Footer -->
@@ -163,6 +175,76 @@
 			tooltip.classList.add('show');
 			setTimeout(() => tooltip.classList.remove('show'), 2000);
 		}
+
+		/* ── GitHub Activity loader ─────────────────────────────── */
+		(function () {
+			var fmt = function (n) { return typeof n === 'number' ? n.toLocaleString() : n; };
+
+			fetch('github-stats.json')
+				.then(function (r) {
+					if (!r.ok) throw new Error(r.status);
+					return r.json();
+				})
+				.then(function (data) {
+					var s = data.stats;
+
+					/* If data hasn't been populated yet */
+					if (s.commits === 0 && s.pull_requests === 0
+						&& (!data.projects || data.projects.length === 0)) {
+						document.getElementById('github-activity').innerHTML =
+							'<p style="color:var(--color-text-muted);text-align:center;padding:1.5rem 0;">' +
+							'Stats are being generated — check back soon!</p>';
+						return;
+					}
+
+					/* Stat cards */
+					var items = [
+						{ icon: 'fa-code', val: fmt(s.commits), lbl: 'Commits' },
+						{ icon: 'fa-code-branch', val: fmt(s.pull_requests), lbl: 'Pull Requests' },
+						{ icon: 'fa-arrow-up', val: '+' + fmt(s.lines_added), lbl: 'Lines Added' },
+						{ icon: 'fa-arrow-down', val: '-' + fmt(s.lines_removed), lbl: 'Lines Removed' },
+						{ icon: 'fa-cube', val: fmt(s.repos_active), lbl: 'Active Repos' }
+					];
+					document.getElementById('stats-grid').innerHTML = items.map(function (st) {
+						return '<div class="stat-card">' +
+							'<i class="fas ' + st.icon + '"></i>' +
+							'<span class="stat-value">' + st.val + '</span>' +
+							'<span class="stat-label">' + st.lbl + '</span></div>';
+					}).join('');
+
+					/* Project cards */
+					var projects = data.projects || [];
+					if (projects.length) {
+						document.getElementById('projects-list').innerHTML = projects.map(function (p) {
+							var h = '<div class="project-card"><div class="project-header">' +
+								'<a href="' + p.url + '" target="_blank">' +
+								(p.org ? '<span class="project-org">' + p.org + ' / </span>' : '') +
+								p.name + '</a>';
+							if (p.language) h += '<span class="project-lang">' + p.language + '</span>';
+							h += '</div>';
+							if (p.description) h += '<p class="project-desc">' + p.description + '</p>';
+							if (p.summary) h += '<p class="project-summary">' + p.summary + '</p>';
+							h += '<div class="project-meta">' +
+								'<span><i class="fas fa-code"></i> ' + p.recent_commits + ' commits</span>' +
+								'<span class="meta-added"><i class="fas fa-plus"></i> ' + fmt(p.lines_added) + '</span>' +
+								'<span class="meta-removed"><i class="fas fa-minus"></i> ' + fmt(p.lines_removed) + '</span>';
+							if (p.stars) h += '<span><i class="fas fa-star"></i> ' + p.stars + '</span>';
+							h += '</div></div>';
+							return h;
+						}).join('');
+					}
+
+					/* Timestamp */
+					document.getElementById('github-updated').textContent =
+						'Updated ' + data.last_updated + ' \u00B7 ' + data.period;
+				})
+				.catch(function () {
+					var el = document.getElementById('github-activity');
+					if (el) el.innerHTML =
+						'<p style="color:var(--color-text-muted);text-align:center;padding:1.5rem 0;">' +
+						'GitHub stats will appear here once generated.</p>';
+				});
+		})();
 	</script>
 
 </body>
