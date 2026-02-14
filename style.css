@@ -737,6 +737,35 @@ main {
   .section-title {
     font-size: 1.4rem;
   }
+
+  /* Show consulting descriptions inline on mobile instead of hover tooltips */
+  .consulting-list li {
+    flex-wrap: wrap;
+  }
+
+  .consulting-desc {
+    position: static;
+    transform: none;
+    background: none;
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+    white-space: normal;
+    box-shadow: none;
+    width: 100%;
+    padding-left: 1.85rem;
+    margin-top: -0.1rem;
+  }
+
+  .consulting-desc::after {
+    display: none;
+  }
+
+  .consulting-list li:hover .consulting-desc {
+    transform: none;
+  }
 }
 
 @media (max-width: 480px) {
