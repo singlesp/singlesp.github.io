@@ -1,27 +1,14 @@
 {
-  "last_updated": "2026-02-14",
+  "last_updated": "2026-02-16",
   "period": "Last 30 days",
   "stats": {
-    "commits": 52,
+    "commits": 38,
     "pull_requests": 0,
-    "lines_added": 4557,
-    "lines_removed": 1004,
+    "lines_added": 3263,
+    "lines_removed": 1136,
     "repos_active": 5
   },
   "projects": [
-    {
-      "name": "sypres-docs",
-      "url": "https://github.com/PennLINC/sypres-docs",
-      "description": "",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "recent_commits": 30,
-      "lines_added": 43,
-      "lines_removed": 28,
-      "summary": "Update dashboard; Update download statistics; Update dashboard; Update download statistics; Update dashboard",
-      "org": "PennLINC"
-    },
     {
       "name": "singlesp.github.io",
       "url": "https://github.com/singlesp/singlesp.github.io",
@@ -29,11 +16,24 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "recent_commits": 13,
-      "lines_added": 2664,
-      "lines_removed": 555,
-      "summary": "mobile; resume; hover; update about; add resume to nav bar",
+      "recent_commits": 19,
+      "lines_added": 955,
+      "lines_removed": 133,
+      "summary": "update research display; add bluesky; add repos; add code tags; break up section",
       "org": ""
+    },
+    {
+      "name": "data-ptsd-mdmactr",
+      "url": "https://github.com/metapsy-project/data-ptsd-mdmactr",
+      "description": "",
+      "language": "",
+      "stars": 0,
+      "forks": 0,
+      "recent_commits": 10,
+      "lines_added": 458,
+      "lines_removed": 582,
+      "summary": "fix mitchell 2023 primary endpoint; update readme; filtered; Update timepoint descriptions; add full_ref",
+      "org": "metapsy-project"
     },
     {
       "name": "lmt",
