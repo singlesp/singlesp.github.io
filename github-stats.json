@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-02-23",
+  "last_updated": "2026-03-02",
   "period": "Last 30 days",
   "stats": {
-    "commits": 34,
+    "commits": 29,
     "pull_requests": 1,
-    "lines_added": 4305,
-    "lines_removed": 3332,
+    "lines_added": 3062,
+    "lines_removed": 2914,
     "repos_active": 5
   },
   "projects": [
@@ -25,7 +25,7 @@
     {
       "name": "data-ptsd-mdmactr",
       "url": "https://github.com/metapsy-project/data-ptsd-mdmactr",
-      "description": "",
+      "description": "Database of MDMA therapies for adults with posttraumatic stress disorder.",
       "language": "",
       "stars": 0,
       "forks": 0,
@@ -42,10 +42,10 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "recent_commits": 7,
-      "lines_added": 2891,
-      "lines_removed": 2616,
-      "summary": "claude; uncrop; break up; gville; square booking",
+      "recent_commits": 2,
+      "lines_added": 1648,
+      "lines_removed": 2198,
+      "summary": "claude",
       "org": "miwarob"
     },
     {
