@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-02",
+  "last_updated": "2026-03-09",
   "period": "Last 30 days",
   "stats": {
-    "commits": 29,
+    "commits": 32,
     "pull_requests": 1,
-    "lines_added": 3062,
-    "lines_removed": 2914,
-    "repos_active": 5
+    "lines_added": 3024,
+    "lines_removed": 2896,
+    "repos_active": 7
   },
   "projects": [
     {
@@ -16,10 +16,10 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "recent_commits": 16,
-      "lines_added": 955,
-      "lines_removed": 133,
-      "summary": "update research display; add bluesky; add repos; add code tags; break up section",
+      "recent_commits": 19,
+      "lines_added": 917,
+      "lines_removed": 115,
+      "summary": "add SEO meta tags, Open Graph, JSON-LD, sitemap, and robots.txt; add code link to Betzel et al. 2026 publication; add Betzel et al. 2026 (Communications Biology) as publication #15; update research display; add bluesky",
       "org": ""
     },
     {
