@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-09",
+  "last_updated": "2026-03-16",
   "period": "Last 30 days",
   "stats": {
-    "commits": 32,
+    "commits": 11,
     "pull_requests": 1,
-    "lines_added": 3024,
-    "lines_removed": 2896,
-    "repos_active": 7
+    "lines_added": 2536,
+    "lines_removed": 2313,
+    "repos_active": 8
   },
   "projects": [
     {
@@ -16,24 +16,11 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "recent_commits": 19,
-      "lines_added": 917,
+      "recent_commits": 9,
+      "lines_added": 888,
       "lines_removed": 115,
       "summary": "add SEO meta tags, Open Graph, JSON-LD, sitemap, and robots.txt; add code link to Betzel et al. 2026 publication; add Betzel et al. 2026 (Communications Biology) as publication #15; update research display; add bluesky",
       "org": ""
-    },
-    {
-      "name": "data-ptsd-mdmactr",
-      "url": "https://github.com/metapsy-project/data-ptsd-mdmactr",
-      "description": "Database of MDMA therapies for adults with posttraumatic stress disorder.",
-      "language": "",
-      "stars": 0,
-      "forks": 0,
-      "recent_commits": 10,
-      "lines_added": 458,
-      "lines_removed": 582,
-      "summary": "fix mitchell 2023 primary endpoint; update readme; filtered; Update timepoint descriptions; add full_ref",
-      "org": "metapsy-project"
     },
     {
       "name": "miwarob.github.io",
@@ -47,19 +34,6 @@
       "lines_removed": 2198,
       "summary": "claude",
       "org": "miwarob"
-    },
-    {
-      "name": "data-depression-psiloctr",
-      "url": "https://github.com/metapsy-project/data-depression-psiloctr",
-      "description": "Database of psilocybin-assisted therapies for adults with depression versus control conditions.",
-      "language": "",
-      "stars": 1,
-      "forks": 0,
-      "recent_commits": 1,
-      "lines_added": 1,
-      "lines_removed": 1,
-      "summary": "Update dataset description in readme.md",
-      "org": "metapsy-project"
     }
   ]
 }
