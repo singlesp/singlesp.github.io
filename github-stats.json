@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-16",
+  "last_updated": "2026-03-23",
   "period": "Last 30 days",
   "stats": {
-    "commits": 11,
-    "pull_requests": 1,
-    "lines_added": 2536,
-    "lines_removed": 2313,
-    "repos_active": 8
+    "commits": 3,
+    "pull_requests": 0,
+    "lines_added": 100,
+    "lines_removed": 0,
+    "repos_active": 6
   },
   "projects": [
     {
@@ -16,24 +16,11 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "recent_commits": 9,
-      "lines_added": 888,
-      "lines_removed": 115,
-      "summary": "add SEO meta tags, Open Graph, JSON-LD, sitemap, and robots.txt; add code link to Betzel et al. 2026 publication; add Betzel et al. 2026 (Communications Biology) as publication #15; update research display; add bluesky",
+      "recent_commits": 3,
+      "lines_added": 100,
+      "lines_removed": 0,
+      "summary": "add SEO meta tags, Open Graph, JSON-LD, sitemap, and robots.txt; add code link to Betzel et al. 2026 publication; add Betzel et al. 2026 (Communications Biology) as publication #15",
       "org": ""
-    },
-    {
-      "name": "miwarob.github.io",
-      "url": "https://github.com/miwarob/miwarob.github.io",
-      "description": "",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "recent_commits": 2,
-      "lines_added": 1648,
-      "lines_removed": 2198,
-      "summary": "claude",
-      "org": "miwarob"
     }
   ]
 }
