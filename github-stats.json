@@ -1,27 +1,14 @@
 {
-  "last_updated": "2026-04-01",
+  "last_updated": "2026-04-02",
   "period": "Last 30 days",
   "stats": {
-    "commits": 7,
+    "commits": 4,
     "pull_requests": 1,
     "repos_active": 2,
-    "lines_added": 482,
+    "lines_added": 382,
     "lines_removed": 282
   },
   "projects": [
-    {
-      "name": "singlesp.github.io",
-      "url": "https://github.com/singlesp/singlesp.github.io",
-      "description": "",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "recent_commits": 4,
-      "lines_added": 346,
-      "lines_removed": 150,
-      "summary": "update dashboard script; add SEO meta tags, Open Graph, JSON-LD, sitemap, and robots.txt; add code link to Betzel et al. 2026 publication; add Betzel et al. 2026 (Communications Biology) as publication #15",
-      "org": ""
-    },
     {
       "name": "data-ptsd-mdmactr",
       "url": "https://github.com/metapsy-project/data-ptsd-mdmactr",
@@ -34,6 +21,19 @@
       "lines_removed": 132,
       "summary": "update data order; Update author list (#9)",
       "org": "metapsy-project"
+    },
+    {
+      "name": "singlesp.github.io",
+      "url": "https://github.com/singlesp/singlesp.github.io",
+      "description": "",
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "recent_commits": 1,
+      "lines_added": 246,
+      "lines_removed": 150,
+      "summary": "update dashboard script",
+      "org": ""
     }
   ]
 }
