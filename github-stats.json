@@ -2,13 +2,39 @@
   "last_updated": "2026-04-06",
   "period": "Last 30 days",
   "stats": {
-    "commits": 4,
-    "pull_requests": 1,
-    "repos_active": 2,
-    "lines_added": 382,
-    "lines_removed": 282
+    "commits": 132,
+    "pull_requests": 7,
+    "repos_active": 4,
+    "lines_added": 1004,
+    "lines_removed": 473
   },
   "projects": [
+    {
+      "name": "sypres-docs",
+      "url": "https://github.com/PennLINC/sypres-docs",
+      "description": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "recent_commits": 74,
+      "lines_added": 236,
+      "lines_removed": 190,
+      "summary": "Update dashboard; Update download statistics; Update dashboard; Update download statistics; Update dashboard",
+      "org": "PennLINC"
+    },
+    {
+      "name": "grmpy_opendata",
+      "url": "https://github.com/PennLINC/grmpy_opendata",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "recent_commits": 54,
+      "lines_added": 386,
+      "lines_removed": 1,
+      "summary": "update atlas plots; fix path to padded gordon; add padded gordon for surface plotting; env yamls; skip midb and tian",
+      "org": "PennLINC"
+    },
     {
       "name": "data-ptsd-mdmactr",
       "url": "https://github.com/metapsy-project/data-ptsd-mdmactr",
