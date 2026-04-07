@@ -14,16 +14,16 @@ Notes:
 - After running, the console output's `projects:` section should list at least one `PennLINC/...` entry. If it doesn't, the user's `gh` token has likely lost SSO authorization — tell them to run `gh auth login` again and re-approve PennLINC in the browser.
 - Show the user the diff of `github-stats.json`, then on approval commit with message `chore: refresh github activity stats` and push.
 
-## Disabled cron workflow
+## No cron workflow
 
-`.github/workflows/update-github-stats.yml.disabled` is intentionally disabled. The Actions runner can only hold a classic PAT in `GH_PAT`, which can't be SSO-authorized for PennLINC, so the daily run produced empty PennLINC results. The Claude-on-demand workflow above replaces it.
+There is intentionally no GitHub Actions workflow for stats. The Actions runner can only hold a classic PAT, which can't be SSO-authorized for PennLINC, so the daily run produced empty PennLINC results and overwrote good data. The Claude-on-demand workflow above replaces it. Do not re-add `.github/workflows/update-github-stats.yml`.
 
 ## Rebuilding cv.pdf and resume.pdf
 
 Both are built from their `.tex` sources with `pdflatex`. Activate mamba base first so we don't pollute other envs:
 
 ```
-source /opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh && mamba activate base
+source ~/mambaforge/etc/profile.d/conda.sh 2>/dev/null || source ~/miniforge3/etc/profile.d/conda.sh && mamba activate base
 pdflatex -interaction=nonstopmode cv.tex && pdflatex -interaction=nonstopmode cv.tex
 pdflatex -interaction=nonstopmode resume.tex && pdflatex -interaction=nonstopmode resume.tex
 ```
