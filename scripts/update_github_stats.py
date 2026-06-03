@@ -38,7 +38,7 @@ except ImportError:
 # ── Config ─────────────────────────────────────────────────────────
 USERNAME = "singlesp"
 OUTPUT = os.path.join(os.path.dirname(os.path.dirname(__file__)), "github-stats.json")
-LOOKBACK_DAYS = 30
+LOOKBACK_DAYS = 90
 MAX_PROJECTS = 8
 MAX_COMMITS_DETAIL = 10
 API_PAUSE = 0.05
