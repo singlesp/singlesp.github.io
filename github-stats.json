@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-14",
+  "last_updated": "2026-10-20",
   "period": "Last 90 days",
   "stats": {
-    "commits": 83,
-    "pull_requests": 6,
-    "repos_active": 7,
-    "lines_added": 5447,
-    "lines_removed": 944
+    "commits": 287,
+    "pull_requests": 21,
+    "repos_active": 6,
+    "lines_added": 5837,
+    "lines_removed": 1820
   },
   "projects": [
     {
@@ -14,12 +14,12 @@
       "url": "https://github.com/PennLINC/sypres-docs",
       "description": "Analysis and documentation repo for SYPRES.",
       "language": "JavaScript",
-      "stars": 1,
+      "stars": 3,
       "forks": 0,
-      "recent_commits": 30,
-      "lines_added": 280,
-      "lines_removed": 144,
-      "summary": "Mdmaptsd revisions (#71); Update dashboard; Update download statistics; Update dashboard; Update download statistics",
+      "recent_commits": 179,
+      "lines_added": 98,
+      "lines_removed": 45,
+      "summary": "add NPP pub to website (#73); Update dashboard; Update download statistics; Update dashboard; Update download statistics",
       "org": "PennLINC"
     },
     {
@@ -29,11 +29,37 @@
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "recent_commits": 25,
-      "lines_added": 19,
-      "lines_removed": 2,
-      "summary": "Stage cubids; add temporary testing-phase data disclaimer; Add ModelArray + ModelArrayIO as one tool (hidden neighbor); ROADMAP: capture the RTD docs-embed plan (on hold); feedback_report: break down by app (multi-app\u2026",
+      "recent_commits": 59,
+      "lines_added": 3993,
+      "lines_removed": 1469,
+      "summary": "docs: list BABS among the apps; Add BABS as an app; a script that copies an app into a host's config.yaml; docs: one answer path, read_thread and grouped search; Answer every question with the agent; read whole thread\u2026",
       "org": "PennLINC"
+    },
+    {
+      "name": "grmpy_opendata",
+      "url": "https://github.com/PennLINC/grmpy_opendata",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "recent_commits": 44,
+      "lines_added": 664,
+      "lines_removed": 32,
+      "summary": "update doc; update dataset descriptions for openneuro; doc recovery mode; recovery scripts; docs",
+      "org": "PennLINC"
+    },
+    {
+      "name": "openneuro",
+      "url": "https://github.com/OpenNeuroOrg/openneuro",
+      "description": "A free and open platform for analyzing and sharing neuroimaging data",
+      "language": "TypeScript",
+      "stars": 162,
+      "forks": 55,
+      "recent_commits": 3,
+      "lines_added": 50,
+      "lines_removed": 22,
+      "summary": "perf(cli): Batch index adds instead of staging one file at a time; fix(cli): Commit the git-annex branch once instead of once per key; fix(cli): Log the underlying error when a file cannot be stat'd",
+      "org": "OpenNeuroOrg"
     },
     {
       "name": "japanese-srs",
@@ -42,36 +68,10 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "recent_commits": 13,
-      "lines_added": 3685,
-      "lines_removed": 288,
-      "summary": "add hiragana, katakana, toggle, and recaps; recap summary; add summaries; add class summary and concept summaries; add counting",
-      "org": ""
-    },
-    {
-      "name": "neurogeo",
-      "url": "https://github.com/singlesp/neurogeo",
-      "description": "",
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "recent_commits": 13,
-      "lines_added": 1380,
-      "lines_removed": 477,
-      "summary": "Add medial (mid-sagittal) view + 6 medial-wall questions; Expand question bank to 30 (was 14); Familiar left-lateral brain orientation + bilateral answer acceptance; Share card links to the deployed site, not a placeh\u2026",
-      "org": ""
-    },
-    {
-      "name": "DMT_NCT",
-      "url": "https://github.com/singlesp/DMT_NCT",
-      "description": "",
-      "language": "MATLAB",
-      "stars": 0,
-      "forks": 0,
       "recent_commits": 1,
-      "lines_added": 2,
-      "lines_removed": 4,
-      "summary": "Revise README with new title and manuscript reference",
+      "lines_added": 990,
+      "lines_removed": 184,
+      "summary": "add A0 materials; add casual/polite forms on back of conjugation cards",
       "org": ""
     },
     {
@@ -82,9 +82,9 @@
       "stars": 0,
       "forks": 0,
       "recent_commits": 1,
-      "lines_added": 81,
-      "lines_removed": 29,
-      "summary": "chore: extend github stats lookback to 90 days and refresh",
+      "lines_added": 42,
+      "lines_removed": 68,
+      "summary": "chore: update GitHub activity stats",
       "org": ""
     }
   ]
